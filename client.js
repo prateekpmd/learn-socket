@@ -14,7 +14,7 @@ socketClient.on('connect', () => {
   socketClient.emit('message', 'Hello from Socket.IO Client');
 
   // Listen for messages from the server
-  socketClient.on('response', (data) => {
+  socketClient.on('message', (data) => {
     console.log('Message from remote server:', data);
   });
 });

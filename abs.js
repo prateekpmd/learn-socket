@@ -7,7 +7,7 @@ router.post('/api', (req, res) => {
   const { message } = req.body;
   
   // Use io to emit the message
-  io.emit('message', message);
+  io.emit('message',{name:message,vacany:"dude im here"} );
   
   res.json({ status: 'Message sent' });
 });
